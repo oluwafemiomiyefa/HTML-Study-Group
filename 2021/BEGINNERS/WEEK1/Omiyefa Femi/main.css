@@ -7,8 +7,12 @@
     font-family: "Josefin Sans", sans-serif;
   }
 
+  .logo img {
+    width: 192px;
+  }
+
   #header {
-    background-color: cadetblue;
+    background-image: url(../Mobile\ image/image-hero.jpg);
     height: 650px;
     background-position: center;
     background-size: cover;
@@ -56,6 +60,46 @@
     line-height: 25px;
     display: none;
   }
+/*Main about styles*/
+  #about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 96px 0;
+    
+  }
+  
+  #about-section .desktop-size {
+    display: none;
+  }
+  
+  #about-section .about-writeup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  #about-section h2 {
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 300;
+    
+  }
+  
+  #about-section p {
+    font-family: "Alata", san-serf;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    opacity: 0.5;
+    width: 77.4%;
+    mix-blend-mode: normal;
+  }
+
   input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -86,4 +130,189 @@
     background-color: #c25454;
     padding: 25px 50px 70px 100px;
   }
+  /* =================== footer Styles ========================*/
+#footer {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#footer .logo-design img {
+  width: 144px;
+  height: 24px;
+  margin-bottom: 32px;
+  margin-top: 56px;
+}
+
+#footer .desktop-align {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*^^^^^^^^^^^ Links ^^^^^^^^^^^^^^^*/
+
+#footer .foot-links ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-bottom: 48px;
+}
+
+#footer li {
+  margin-bottom: 16px;
+}
+
+#footer .foot-links a {
+  font-family: "Alata", san-serif;
+  font-size: 15px;
+  line-height: 25px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*^^^^^^^^^^^ Icons ^^^^^^^^^^^^^^^*/
+#footer .social-icons {
+  display: flex;
+  width: 38.4%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/*^^^^^^^^^^^ Copy-Write ^^^^^^^^^^*/
+#footer .copywrite {
+  font-family: "Alata", san-serif;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-bottom: 56px;
+}
+
+/*^^^^^^^^^^^ FM Properties ^^^^^^^*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* =================== Media Queries ========================*/
+
+/*Mobile layout CSS Nav bar Only*/
+@media (max-width: 786px) {
+  nav {
+    margin: 0 24px;
+    padding-top: 40px;
+  }
+
+  .logo img {
+    width: 144px;
+    display: block;
+    position: sticky;
+    z-index: 100;
+  }
+
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+    transition: top 1s ease;
+    display: none;
+  }
+
+  nav ul {
+    padding-top: 223px;
+    padding-left: 24px;
+  }
+
+  nav .mainMenu li a {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 25px;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 24px;
+    font-size: 30px;
+  }
+
+  nav .openMenu {
+    display: block;
+  }
+}
+
+/*Desktop layout CSS*/
+@media only screen and (min-width: 768px) {
+
+  /*^^^^^^^^^^^ Header/Hero Section ^^^^^^^^^^^^^^^*/
+  #header {
+    background-image: linear-gradient(270deg,
+        rgba(0, 0, 0, 0.0001) 0%,
+        rgba(0, 0, 0, 0.601863) 100%),
+      url(../Mobile\ image/.image-hero.jpg);
+  }
+  /*^^^^^^^^^^^ Footer Section ^^^^^^^^^^^^^^^*/
+
+  #footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 44px 165px;
+  }
+
+  #footer .logo-design img {
+    margin-bottom: 14px;
+    margin-top: 0;
+  }
+
+  #footer .desktop-align {
+    align-items: flex-start;
+  }
+
+  /*^^^^^^^^^^^ Links ^^^^^^^^^^^^^^^*/
+
+  #footer .foot-links ul {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  #footer li {
+    margin-bottom: 0;
+    margin-right: 32px;
+  }
+
+  /*^^^^^^^^^^^ Icons ^^^^^^^^^^^^^^^*/
+  #footer .social-icons {
+    width: 53.1%;
+    margin-bottom: 14px;
+    align-self: flex-end;
+  }
+
+  /*^^^^^^^^^^^ Copy-Write ^^^^^^^^^^*/
+  #footer .copywrite {
+    margin-bottom: 0;
+  }
+}
   
